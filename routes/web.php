@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ItemController; // impor ItemController
 
 /*
+
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
@@ -13,9 +14,10 @@ use App\Http\Controllers\ItemController; // impor ItemController
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-// /world untuk nama page url
-Route::get('/about', function () {
-    return 'Faiza / 2341760105';
-});
-
+// method get dapat menambahkan comentar pada url.
+// sedangkan method post dapat menampilkan coment pada tampilannya.
+Route::get('/articles/{id}', function 
+($id) { 
+    return 'Halaman Artikel dengan ID '.$id; });
+    
 Route::resource('items', ItemController::class); // membuat crud untuk items
