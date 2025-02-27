@@ -13,9 +13,9 @@ use App\Http\Controllers\ItemController; // impor ItemController
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
+// /world untuk nama page url
+Route::get('/about', function () {
+    return 'Faiza / 2341760105';
 });
 
 Route::resource('items', ItemController::class); // membuat crud untuk items
