@@ -16,8 +16,7 @@ use App\Http\Controllers\ItemController; // impor ItemController
 */
 // method get dapat menambahkan comentar pada url.
 // sedangkan method post dapat menampilkan coment pada tampilannya.
-Route::get('/articles/{id}', function 
-($id) { 
-    return 'Halaman Artikel dengan ID '.$id; });
+Route::get('/user/{name?}', function ($name='John') {
+    return 'Nama saya '.$name;});
     
 Route::resource('items', ItemController::class); // membuat crud untuk items
